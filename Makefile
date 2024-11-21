@@ -1,7 +1,7 @@
 all: ur clean package index
 	@echo "Packaging complete and index.yaml updated."
 
-CHARTS := portfolio
+CHARTS := portfolio streamlit-wh
 
 REPO_URL := https://Ujstor.github.io/helm-charts-github-apps
 

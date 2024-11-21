@@ -1,0 +1,10 @@
+deployment:
+  image: "ujstor/working_hours"
+  tag: "1.0.1"
+  replicas:
+domain: working-hours.ujstor.com
+ingress:
+  issuer:
+  tls:
+    secretName:
+ingressClassName:

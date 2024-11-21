@@ -3,12 +3,23 @@ entries:
   portfolio:
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2024-11-21T02:04:05.050892458+01:00"
+    created: "2024-11-21T23:33:19.561359726+01:00"
     description: Ujstor's portfolio Helm chart for Kubernetes
-    digest: d3eb3b659888114341512f574975e9ec02f539abe42eca69b72aa50fae495910
+    digest: 9ef68c0acb714539f098e8c25bbbb5027044550526ffb873e5be1f3cca326818
     name: portfolio
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-github-apps/portfolio-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-21T02:04:05.050664133+01:00"
+  streamlut-wh:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-11-21T23:33:19.561500258+01:00"
+    description: Ujstor's streamlut-wh Helm chart for Kubernetes
+    digest: 7c43694a363e958d177afa49416238333549d1437e45cd3bb1dd48bb4ba88185
+    name: streamlut-wh
+    type: application
+    urls:
+    - https://Ujstor.github.io/helm-charts-github-apps/streamlut-wh-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-11-21T23:33:19.561143781+01:00"
