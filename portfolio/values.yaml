@@ -1,0 +1,10 @@
+deployment:
+  image: "ujstor/portfolio-web-go"
+  tag: "1.2.3"
+  replicas:
+domain: portfolio.ujstor.com
+ingress:
+  issuer:
+  tls:
+    secretName:
+ingressClassName:
