@@ -16,13 +16,13 @@ spec:
     - {{ .Values.domain}}
     secretName: {{ .Values.ingress.tls.secretName | default "portfolio-tls" }}
   rules:
-  - host: {{ .Values.domain}}
+  - host: {{ .Values.domain }}
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: {{ .Values.name }}
+            name: {{ .Chart.Name }}
             port:
               number: 5000
