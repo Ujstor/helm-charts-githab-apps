@@ -13,7 +13,7 @@ spec:
   tls:
   - hosts:
     - {{ .Values.domain}}
-    secretName: {{ .Values.ingress.tls.secretName | default "streamlut-wh-tls" }}
+    secretName: {{ .Values.ingress.tls.secretName | default "streamlit-wh-tls" }}
   rules:
   - host: {{ .Values.domain }}
     http:
