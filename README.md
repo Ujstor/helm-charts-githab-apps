@@ -5,7 +5,7 @@ Helm chart collection that simplifies Kubernetes configuration to be production-
 
 # portfolio
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.23.0](https://img.shields.io/badge/AppVersion-1.23.0-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.2.3](https://img.shields.io/badge/AppVersion-1.2.3-informational?style=flat-square)
 
 Ujstor's portfolio Helm chart for Kubernetes
 
@@ -20,3 +20,5 @@ Ujstor's portfolio Helm chart for Kubernetes
 | ingress.issuer | string | `nil` |  |
 | ingress.tls.secretName | string | `nil` |  |
 | ingressClassName | string | `nil` |  |
+
+
