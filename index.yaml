@@ -3,9 +3,9 @@ entries:
   portfolio:
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2024-11-21T23:39:50.392994591+01:00"
+    created: "2024-11-23T00:02:07.095715109+01:00"
     description: Ujstor's portfolio Helm chart for Kubernetes
-    digest: f6918f421686579d0b7741f7bc1c28db6fc745a7220858dd8999e1ccda40e939
+    digest: b7783f29e372730450f6e4cc55f9782f12b5a60631728c34782ec0ef69921ef6
     name: portfolio
     type: application
     urls:
@@ -14,12 +14,27 @@ entries:
   streamlit-wh:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2024-11-21T23:39:50.393142303+01:00"
+    created: "2024-11-23T00:02:07.095859271+01:00"
     description: Ujstor's streamlit-wh Helm chart for Kubernetes
-    digest: aa5a68c3c7def9b65c461cb782a6601b8af478349332d0b1c76423f238c34787
+    digest: 43cb4e667267f332743d3b16261c6b8191f79da59c709a90a19c5c9369d7baa6
     name: streamlit-wh
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-github-apps/streamlit-wh-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-21T23:39:50.392761119+01:00"
+  todo-go-htmx:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-11-23T00:02:07.09636395+01:00"
+    dependencies:
+    - name: postgres-cluster
+      repository: https://ujstor.github.io/helm-charts-system
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: d9c9f10146be5eaca613143e9e8eee9576dc125285c1f2fd2a1e58bd5bf175ac
+    name: todo-go-htmx
+    type: application
+    urls:
+    - https://Ujstor.github.io/helm-charts-github-apps/todo-go-htmx-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-11-23T00:02:07.095489925+01:00"
