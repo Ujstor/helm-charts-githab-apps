@@ -37,6 +37,8 @@ A Helm chart for Kubernetes
 | postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"500Mi"` |  |
 | postgres-cluster.instances[0].name | string | `"todo-htmx-go"` |  |
 | postgres-cluster.instances[0].replicas | int | `1` |  |
+| postgres-cluster.patroni.dynamicConfiguration.postgresql.parameters.password_encryption | string | `"scram-sha-256"` |  |
+| postgres-cluster.patroni.dynamicConfiguration.postgresql.pg_hba[0] | string | `"host all all all scram-sha-25"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].name | string | `"repo1"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.resources.requests.storage | string | `"1Mi"` |  |
