@@ -90,8 +90,8 @@ A Helm chart for Kubernetes
 | resources.limits.memory | string | `"128Mi"` |  |
 | resources.requests.cpu | string | `"50m"` |  |
 | resources.requests.memory | string | `"64Mi"` |  |
-| service.port | int | `80` |  |
-| service.targetPort | string | `nil` |  |
+| service.port | int | `8080` |  |
+| service.targetPort | int | `8080` |  |
 | service.type | string | `"ClusterIP"` |  |
 
 
