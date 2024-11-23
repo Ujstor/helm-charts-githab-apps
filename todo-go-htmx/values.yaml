@@ -1,5 +1,5 @@
 image:
-  repository: todo-go-htmx
+  repository: ujstor/todo-go-htmx
   pullPolicy: IfNotPresent
   tag: "1.1.0"
 replicaCount: 1

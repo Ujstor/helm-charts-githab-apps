@@ -62,7 +62,7 @@ A Helm chart for Kubernetes
 |-----|------|---------|-------------|
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"todo-go-htmx"` |  |
+| image.repository | string | `"ujstor/todo-go-htmx"` |  |
 | image.tag | string | `"1.1.0"` |  |
 | ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
