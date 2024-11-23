@@ -55,7 +55,7 @@ A Helm chart for Kubernetes
 | Repository | Name | Version |
 |------------|------|---------|
 | https://ujstor.github.io/helm-charts-system | postgres-cluster | 1.0.0 |
-| https://ujstor.github.io/helm-charts-system | secret-store | 1.0.0 |
+| https://ujstor.github.io/helm-charts-system | secstore(secret-store) | 1.0.0 |
 
 ## Values
 
@@ -102,10 +102,10 @@ A Helm chart for Kubernetes
 | resources.limits.memory | string | `"128Mi"` |  |
 | resources.requests.cpu | string | `"50m"` |  |
 | resources.requests.memory | string | `"64Mi"` |  |
-| secretStore.clusterWide | bool | `false` |  |
-| secretStore.provider.kubernetes.auth.serviceAccount.create | bool | `true` |  |
-| secretStore.provider.kubernetes.auth.serviceAccount.name | string | `"todo-secret-store-sa"` |  |
-| secretStore.provider.type | string | `"kubernetes"` |  |
+| secstore.secretStore.clusterWide | bool | `false` |  |
+| secstore.secretStore.provider.kubernetes.auth.serviceAccount.create | bool | `true` |  |
+| secstore.secretStore.provider.kubernetes.auth.serviceAccount.name | string | `"todo-secret-store-sa"` |  |
+| secstore.secretStore.provider.type | string | `"kubernetes"` |  |
 | service.port | int | `8088` |  |
 | service.targetPort | int | `8088` |  |
 | service.type | string | `"ClusterIP"` |  |
