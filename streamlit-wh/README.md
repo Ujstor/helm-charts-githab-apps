@@ -8,11 +8,28 @@ Ujstor's streamlit-wh Helm chart for Kubernetes
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| deployment.image | string | `"ujstor/working_hours"` |  |
-| deployment.replicas | string | `nil` |  |
-| deployment.tag | string | `"1.0.1"` |  |
-| domain | string | `"working-hours.ujstor.com"` |  |
-| ingress.issuer | string | `nil` |  |
-| ingress.tls.secretName | string | `nil` |  |
-| ingressClassName | string | `nil` |  |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.repository | string | `"ujstor/working_hours"` |  |
+| image.tag | string | `"1.0.1"` |  |
+| ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
+| ingress.className | string | `"nginx"` |  |
+| ingress.enabled | bool | `true` |  |
+| ingress.hosts[0].host | string | `"working-hours.ujstor.com"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
+| ingress.tls[0].hosts[0] | string | `"working-hours.ujstor.com"` |  |
+| ingress.tls[0].secretName | string | `"streamlit-wh-tls"` |  |
+| nameOverride | string | `""` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| replicaCount | int | `1` |  |
+| resources.limits.cpu | string | `"100m"` |  |
+| resources.limits.memory | string | `"128Mi"` |  |
+| resources.requests.cpu | string | `"50m"` |  |
+| resources.requests.memory | string | `"64Mi"` |  |
+| service.port | int | `8501` |  |
+| service.targetPort | int | `8501` |  |
+| service.type | string | `"ClusterIP"` |  |
 

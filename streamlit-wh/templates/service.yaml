@@ -1,13 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: {{ .Release.Namespace }}
-  name: {{ .Chart.Name }}
+  name: {{ include "streamlit-wh.fullname" . }}
+  labels:
+    {{- include "streamlit-wh.labels" . | nindent 4 }}
 spec:
-  selector:
-    app: {{ .Chart.Name }}
-  type:
+  type: {{ .Values.service.type }}
   ports:
-    - protocol: TCP
-      port: 8501
-      targetPort: 8501
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "streamlit-wh.selectorLabels" . | nindent 4 }}

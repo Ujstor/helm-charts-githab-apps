@@ -1,10 +1,35 @@
-deployment:
-  image: "ujstor/portfolio-web-go"
+image:
+  repository: ujstor/portfolio-web-go
+  pullPolicy: IfNotPresent
   tag: "1.2.3"
-  replicas:
-domain: portfolio.ujstor.com
+replicaCount: 1
+nameOverride: ""
+fullnameOverride: ""
+podAnnotations: {}
+podLabels: {}
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+service:
+  type: ClusterIP
+  port: 5000
+  targetPort: 5000
 ingress:
-  issuer:
+  enabled: true
+  className: "nginx"
+  annotations: 
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+  hosts:
+    - host: notes.ujstor.com
+      paths:
+        - path: /
+          pathType: Prefix
   tls:
-    secretName:
-ingressClassName:
+   - secretName: portfolio-tls
+     hosts:
+       - portfolio.ujstor.com

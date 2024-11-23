@@ -50,13 +50,30 @@ Ujstor's portfolio Helm chart for Kubernetes
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| deployment.image | string | `"ujstor/portfolio-web-go"` |  |
-| deployment.replicas | string | `nil` |  |
-| deployment.tag | string | `"1.2.3"` |  |
-| domain | string | `"portfolio.ujstor.com"` |  |
-| ingress.issuer | string | `nil` |  |
-| ingress.tls.secretName | string | `nil` |  |
-| ingressClassName | string | `nil` |  |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.repository | string | `"ujstor/portfolio-web-go"` |  |
+| image.tag | string | `"1.2.3"` |  |
+| ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
+| ingress.className | string | `"nginx"` |  |
+| ingress.enabled | bool | `true` |  |
+| ingress.hosts[0].host | string | `"notes.ujstor.com"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
+| ingress.tls[0].hosts[0] | string | `"portfolio.ujstor.com"` |  |
+| ingress.tls[0].secretName | string | `"portfolio-tls"` |  |
+| nameOverride | string | `""` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| replicaCount | int | `1` |  |
+| resources.limits.cpu | string | `"100m"` |  |
+| resources.limits.memory | string | `"128Mi"` |  |
+| resources.requests.cpu | string | `"50m"` |  |
+| resources.requests.memory | string | `"64Mi"` |  |
+| service.port | int | `5000` |  |
+| service.targetPort | int | `5000` |  |
+| service.type | string | `"ClusterIP"` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
@@ -71,13 +88,30 @@ Ujstor's streamlit-wh Helm chart for Kubernetes
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| deployment.image | string | `"ujstor/working_hours"` |  |
-| deployment.replicas | string | `nil` |  |
-| deployment.tag | string | `"1.0.1"` |  |
-| domain | string | `"working-hours.ujstor.com"` |  |
-| ingress.issuer | string | `nil` |  |
-| ingress.tls.secretName | string | `nil` |  |
-| ingressClassName | string | `nil` |  |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.repository | string | `"ujstor/working_hours"` |  |
+| image.tag | string | `"1.0.1"` |  |
+| ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
+| ingress.className | string | `"nginx"` |  |
+| ingress.enabled | bool | `true` |  |
+| ingress.hosts[0].host | string | `"working-hours.ujstor.com"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
+| ingress.tls[0].hosts[0] | string | `"working-hours.ujstor.com"` |  |
+| ingress.tls[0].secretName | string | `"streamlit-wh-tls"` |  |
+| nameOverride | string | `""` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| replicaCount | int | `1` |  |
+| resources.limits.cpu | string | `"100m"` |  |
+| resources.limits.memory | string | `"128Mi"` |  |
+| resources.requests.cpu | string | `"50m"` |  |
+| resources.requests.memory | string | `"64Mi"` |  |
+| service.port | int | `8501` |  |
+| service.targetPort | int | `8501` |  |
+| service.type | string | `"ClusterIP"` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
