@@ -52,7 +52,7 @@ postgres-cluster:
   # Add minimal backup configuration
   pgBackRestConfig:
     repos:
-      - name: nobackup1
+      - name: repo1
         volume:
           volumeClaimSpec:
             accessModes:

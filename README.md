@@ -83,7 +83,7 @@ A Helm chart for Kubernetes
 | postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"500Mi"` |  |
 | postgres-cluster.instances[0].name | string | `"todo-htmx-go"` |  |
 | postgres-cluster.instances[0].replicas | int | `1` |  |
-| postgres-cluster.pgBackRestConfig.repos[0].name | string | `"nobackup1"` |  |
+| postgres-cluster.pgBackRestConfig.repos[0].name | string | `"repo1"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.resources.requests.storage | string | `"1Mi"` |  |
 | postgres-cluster.pgBackRestConfig.resources.limits.cpu | string | `"50m"` |  |
