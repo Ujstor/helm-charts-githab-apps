@@ -3,9 +3,9 @@ entries:
   portfolio:
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2024-11-23T18:41:18.551553485+01:00"
+    created: "2024-11-23T18:54:27.671339845+01:00"
     description: Ujstor's portfolio Helm chart for Kubernetes
-    digest: 0a44347f08535fdb3696eca81f380c0c7990553df0e841ee438b6d3380cb1156
+    digest: 7d5b3cf31e89aa88c6518bd4484123dd403e8b071c66967b818ea1d70f0a048e
     name: portfolio
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   streamlit-wh:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2024-11-23T18:41:18.551723048+01:00"
+    created: "2024-11-23T18:54:27.671489558+01:00"
     description: Ujstor's streamlit-wh Helm chart for Kubernetes
-    digest: 69ad7aac0753331734a1db096c1bafb6c33516de67d50dc2100ad53e84da9bcd
+    digest: 2e58b72ae287f64ce2c040f6ebce23d4f84af2a13c782566fb421a1214a0400f
     name: streamlit-wh
     type: application
     urls:
@@ -25,20 +25,19 @@ entries:
   todo-go-htmx:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2024-11-23T18:41:18.552568422+01:00"
+    created: "2024-11-23T18:54:27.672197481+01:00"
     dependencies:
     - name: postgres-cluster
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
-    - alias: secstore
-      name: secret-store
+    - name: secret-store
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: 30c0a491a0bd887c63e1ab02b2cabdfbe8b685ac530183ab6ea9713537404f7a
+    digest: ccfe6d0e1d9b91c909616c096cd1f5f21863054650ce8436a2bdb11f47889c25
     name: todo-go-htmx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-github-apps/todo-go-htmx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-23T18:41:18.551307321+01:00"
+generated: "2024-11-23T18:54:27.671104461+01:00"

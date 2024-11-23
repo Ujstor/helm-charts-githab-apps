@@ -5,5 +5,5 @@ dependencies:
 - name: secret-store
   repository: https://ujstor.github.io/helm-charts-system
   version: 1.0.0
-digest: sha256:177c54bd4709b8e1537e70bd0b7b999d36842484e460972aa736bf52e9e5342c
-generated: "2024-11-23T18:41:11.691981759+01:00"
+digest: sha256:bbdb0211cf8ce4128f35dbadbcc8304afda2a15b7d0842a09892762e2d9ec0b0
+generated: "2024-11-23T18:54:20.886145666+01:00"
