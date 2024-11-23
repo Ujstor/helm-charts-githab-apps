@@ -47,5 +47,5 @@ postgres-cluster:
         - "ReadWriteOnce"
         resources:
           requests:
-            storage: 500mi
+            storage: 500Mi
   port: 5432

@@ -34,7 +34,7 @@ A Helm chart for Kubernetes
 | postgres-cluster.instanceMemory | string | `"500Mi"` |  |
 | postgres-cluster.instanceReplicas | int | `1` |  |
 | postgres-cluster.instances[0].dataVolumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
-| postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"500mi"` |  |
+| postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"500Mi"` |  |
 | postgres-cluster.instances[0].name | string | `"todo-htmx-go"` |  |
 | postgres-cluster.instances[0].replicas | int | `1` |  |
 | postgres-cluster.port | int | `5432` |  |
