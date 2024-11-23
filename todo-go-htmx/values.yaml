@@ -16,8 +16,8 @@ resources:
     memory: 64Mi
 service:
   type: ClusterIP
-  port: 8080
-  targetPort: 8080
+  port: 8088
+  targetPort: 8088
 ingress:
   enabled: true
   className: "nginx"
@@ -66,7 +66,7 @@ postgres-cluster:
               - "ReadWriteOnce"
             resources:
               requests:
-                storage: 1Mi
+                storage: 100Mi
     resources:
       limits:
         memory: "64Mi"

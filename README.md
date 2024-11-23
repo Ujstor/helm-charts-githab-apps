@@ -87,7 +87,7 @@ A Helm chart for Kubernetes
 | postgres-cluster.patroni.dynamicConfiguration.postgresql.pg_hba[0] | string | `"host all all all scram-sha-25"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].name | string | `"repo1"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
-| postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.resources.requests.storage | string | `"1Mi"` |  |
+| postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.resources.requests.storage | string | `"100Mi"` |  |
 | postgres-cluster.pgBackRestConfig.resources.limits.cpu | string | `"50m"` |  |
 | postgres-cluster.pgBackRestConfig.resources.limits.memory | string | `"64Mi"` |  |
 | postgres-cluster.port | int | `5432` |  |
@@ -97,8 +97,8 @@ A Helm chart for Kubernetes
 | resources.limits.memory | string | `"128Mi"` |  |
 | resources.requests.cpu | string | `"50m"` |  |
 | resources.requests.memory | string | `"64Mi"` |  |
-| service.port | int | `8080` |  |
-| service.targetPort | int | `8080` |  |
+| service.port | int | `8088` |  |
+| service.targetPort | int | `8088` |  |
 | service.type | string | `"ClusterIP"` |  |
 
 
