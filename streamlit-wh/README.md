@@ -25,10 +25,10 @@ Ujstor's streamlit-wh Helm chart for Kubernetes
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
 | replicaCount | int | `1` |  |
-| resources.limits.cpu | string | `"100m"` |  |
-| resources.limits.memory | string | `"128Mi"` |  |
-| resources.requests.cpu | string | `"50m"` |  |
-| resources.requests.memory | string | `"64Mi"` |  |
+| resources.limits.cpu | string | `"500m"` |  |
+| resources.limits.memory | string | `"512Mi"` |  |
+| resources.requests.cpu | string | `"250m"` |  |
+| resources.requests.memory | string | `"256Mi"` |  |
 | service.port | int | `8501` |  |
 | service.targetPort | int | `8501` |  |
 | service.type | string | `"ClusterIP"` |  |

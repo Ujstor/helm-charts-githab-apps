@@ -3,9 +3,9 @@ entries:
   notes-flask:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-23T20:23:09.019842553+01:00"
+    created: "2024-11-23T20:53:53.777470429+01:00"
     description: A Helm chart for Kubernetes
-    digest: 6fd1a38c56c13f5e1a2711818fb728b1565d1590a3c486b726d286171639e4e3
+    digest: f6cf8e4b7804cf52d2d9aadda23f265ed90bde965c05622edd6c648dd64a3308
     name: notes-flask
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   portfolio:
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2024-11-23T20:23:09.020034236+01:00"
+    created: "2024-11-23T20:53:53.777708483+01:00"
     description: Ujstor's portfolio Helm chart for Kubernetes
-    digest: 28b5e942abef6678469a2d38520742e75a9d4faccb56e0fdf3aa97fa7152deb2
+    digest: f173f929c9b658106e65ab1cb2b57a32b9582266cf81603cc57347953bef13b8
     name: portfolio
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   streamlit-wh:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2024-11-23T20:23:09.02021865+01:00"
+    created: "2024-11-23T20:53:53.777944857+01:00"
     description: Ujstor's streamlit-wh Helm chart for Kubernetes
-    digest: a2fc155b7aee55480a86a857fba74087a8bf7001f679dbdcc48c0e02e257add2
+    digest: d324d69f5aa4d59249e4ada223e6dd49a73a74cfc841f2942de21fb066d02e7e
     name: streamlit-wh
     type: application
     urls:
@@ -36,7 +36,7 @@ entries:
   todo-go-htmx:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2024-11-23T20:23:09.020864711+01:00"
+    created: "2024-11-23T20:53:53.778757532+01:00"
     dependencies:
     - name: postgres-cluster
       repository: https://ujstor.github.io/helm-charts-system
@@ -45,10 +45,10 @@ entries:
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: b4a23cb9475738d0f2f8ba08fa740eff2c203a8d61e04a4e5b0551e8086b58a3
+    digest: 462cdd424eaf213c009090347cc2131aa8b9dc07d417ac2fc60f2ab4f82ad58a
     name: todo-go-htmx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-github-apps/todo-go-htmx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-23T20:23:09.019559348+01:00"
+generated: "2024-11-23T20:53:53.777170174+01:00"

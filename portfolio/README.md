@@ -16,7 +16,7 @@ Ujstor's portfolio Helm chart for Kubernetes
 | ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
 | ingress.className | string | `"nginx"` |  |
 | ingress.enabled | bool | `true` |  |
-| ingress.hosts[0].host | string | `"notes.ujstor.com"` |  |
+| ingress.hosts[0].host | string | `"portfolio.ujstor.com"` |  |
 | ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
 | ingress.tls[0].hosts[0] | string | `"portfolio.ujstor.com"` |  |
