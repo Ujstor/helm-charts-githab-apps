@@ -80,7 +80,7 @@ A Helm chart for Kubernetes
 | postgres-cluster.instanceMemory | string | `"500Mi"` |  |
 | postgres-cluster.instanceReplicas | int | `1` |  |
 | postgres-cluster.instances[0].dataVolumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
-| postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"500Mi"` |  |
+| postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"100Mi"` |  |
 | postgres-cluster.instances[0].name | string | `"todo-htmx-go"` |  |
 | postgres-cluster.instances[0].replicas | int | `1` |  |
 | postgres-cluster.patroni.dynamicConfiguration.postgresql.pg_hba[0] | string | `"local all postgres trust"` |  |
@@ -93,6 +93,9 @@ A Helm chart for Kubernetes
 | postgres-cluster.pgBackRestConfig.resources.limits.memory | string | `"64Mi"` |  |
 | postgres-cluster.port | int | `5432` |  |
 | postgres-cluster.postgresVersion | int | `16` |  |
+| postgres-cluster.users[0].databases[0] | string | `"todo-go-htmx"` |  |
+| postgres-cluster.users[0].name | string | `"todo-go-htmx"` |  |
+| postgres-cluster.users[0].options | string | `"SUPERUSER"` |  |
 | replicaCount | int | `1` |  |
 | resources.limits.cpu | string | `"100m"` |  |
 | resources.limits.memory | string | `"128Mi"` |  |

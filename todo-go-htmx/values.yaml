@@ -47,7 +47,7 @@ postgres-cluster:
         - "ReadWriteOnce"
         resources:
           requests:
-            storage: 500Mi
+            storage: 100Mi
   port: 5432
   patroni:
     dynamicConfiguration:
@@ -56,6 +56,12 @@ postgres-cluster:
           - local all postgres trust
           - local all all trust
           - host all all all md5
+  #allow goose migrations
+  users:
+    - name: todo-go-htmx
+      databases:
+        - todo-go-htmx
+      options: "SUPERUSER"
   # Add minimal backup configuration
   pgBackRestConfig:
     repos:
