@@ -2,5 +2,8 @@ dependencies:
 - name: postgres-cluster
   repository: https://ujstor.github.io/helm-charts-system
   version: 1.0.0
-digest: sha256:1f223ba6bc33f032e44cbaaf8e7f7884c6cc3e9f5ac759e758513effff2b1059
-generated: "2024-11-23T00:02:02.027785739+01:00"
+- name: secret-store
+  repository: https://ujstor.github.io/helm-charts-system
+  version: 1.0.0
+digest: sha256:bbdb0211cf8ce4128f35dbadbcc8304afda2a15b7d0842a09892762e2d9ec0b0
+generated: "2024-11-23T18:20:54.043648391+01:00"

@@ -9,3 +9,6 @@ dependencies:
 - name: postgres-cluster
   version: 1.0.0
   repository: "https://ujstor.github.io/helm-charts-system"
+- name: secret-store
+  version: 1.0.0
+  repository: "https://ujstor.github.io/helm-charts-system"

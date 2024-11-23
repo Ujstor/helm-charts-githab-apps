@@ -77,3 +77,14 @@ postgres-cluster:
       limits:
         memory: "64Mi"
         cpu: "50m"
+
+secret-store:
+  secretStore:
+    clusterWide: false
+    provider:
+      type: kubernetes
+      kubernetes:
+        auth:
+          serviceAccount:
+            create: true
+            name: "todo-secret-store-sa"
