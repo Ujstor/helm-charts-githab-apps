@@ -17,7 +17,7 @@ A Helm chart for Kubernetes
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ujstor/todo-go-htmx"` |  |
-| image.tag | string | `"1.1.0"` |  |
+| image.tag | string | `"1.1.1"` |  |
 | ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
 | ingress.className | string | `"nginx"` |  |
@@ -37,6 +37,11 @@ A Helm chart for Kubernetes
 | postgres-cluster.instances[0].dataVolumeClaimSpec.resources.requests.storage | string | `"500Mi"` |  |
 | postgres-cluster.instances[0].name | string | `"todo-htmx-go"` |  |
 | postgres-cluster.instances[0].replicas | int | `1` |  |
+| postgres-cluster.pgBackRestConfig.repos[0].name | string | `"nobackup1"` |  |
+| postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
+| postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.resources.requests.storage | string | `"1Mi"` |  |
+| postgres-cluster.pgBackRestConfig.resources.limits.cpu | string | `"50m"` |  |
+| postgres-cluster.pgBackRestConfig.resources.limits.memory | string | `"64Mi"` |  |
 | postgres-cluster.port | int | `5432` |  |
 | postgres-cluster.postgresVersion | int | `16` |  |
 | replicaCount | int | `1` |  |

@@ -1,7 +1,7 @@
 image:
   repository: ujstor/todo-go-htmx
   pullPolicy: IfNotPresent
-  tag: "1.1.0"
+  tag: "1.1.1"
 replicaCount: 1
 nameOverride: ""
 fullnameOverride: ""
@@ -49,3 +49,18 @@ postgres-cluster:
           requests:
             storage: 500Mi
   port: 5432
+  # Add minimal backup configuration
+  pgBackRestConfig:
+    repos:
+      - name: nobackup1
+        volume:
+          volumeClaimSpec:
+            accessModes:
+              - "ReadWriteOnce"
+            resources:
+              requests:
+                storage: 1Mi
+    resources:
+      limits:
+        memory: "64Mi"
+        cpu: "50m"
