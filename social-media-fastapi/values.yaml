@@ -1,0 +1,88 @@
+image:
+  repository: ujstor/fastapi
+  pullPolicy: IfNotPresent
+  tag: "1.0.4"
+replicaCount: 1
+nameOverride: ""
+fullnameOverride: ""
+podAnnotations: {}
+podLabels: {}
+resources:
+  limits:
+    cpu: 200m
+    memory: 252Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+service:
+  type: ClusterIP
+  port: 8010
+  targetPort: 8010
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: 
+    cert-manager.io/cluster-issuer: "letsencrypt" 
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+  hosts:
+    - host: social-media.api.ujstor.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+   - secretName: social-media-fastapi-tls
+     hosts:
+       - social-media.api.ujstor.com
+
+postgres-cluster:
+  postgresVersion: 16
+  instanceMemory: 500Mi
+  instanceCPU: 250m
+  instanceReplicas: 1
+  instances:
+    - name: social-media-fastapi
+      replicas: 1
+      dataVolumeClaimSpec:
+        accessModes:
+        - "ReadWriteOnce"
+        resources:
+          requests:
+            storage: 100Mi
+  port: 5432
+  patroni:
+    dynamicConfiguration:
+      postgresql:
+        pg_hba:
+          - local all postgres trust
+          - local all all trust
+          - host all all all md5
+  users:
+    - name: social-media-fastapi
+      databases:
+        - social-media-fastapi
+      options: "SUPERUSER"
+  pgBackRestConfig:
+    repos:
+      - name: repo1
+        volume:
+          volumeClaimSpec:
+            accessModes:
+              - "ReadWriteOnce"
+            resources:
+              requests:
+                storage: 100Mi
+    resources:
+      limits:
+        memory: "64Mi"
+        cpu: "50m"
+
+secret-store:
+  secretStore:
+    clusterWide: false
+    provider:
+      type: kubernetes
+      kubernetes:
+        auth:
+          serviceAccount:
+            create: true
+            name: "social-media-fastapi-secret-store-sa"

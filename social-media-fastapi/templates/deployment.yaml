@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "social-media-fastapi.fullname" . }}
+  labels:
+    {{- include "social-media-fastapi.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "social-media-fastapi.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "social-media-fastapi.labels" . | nindent 8 }}
+        {{- with .Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      volumes:
+        - name: secrets-volume
+          secret:
+            secretName: {{ include "social-media-fastapi.fullname" . }}-secret
+        - name: config-secrets-volume
+          secret:
+            secretName: {{ include "social-media-fastapi.fullname" . }}-config-secret
+        - name: config-volume
+          configMap:
+            name: {{ include "social-media-fastapi.fullname" . }}-config
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.targetPort }}
+              protocol: TCP
+          volumeMounts:
+            - name: secrets-volume
+              mountPath: .env
+            - name: config-secrets-volume
+              mountPath: /app/config-secrets
+            - name: config-volume
+              mountPath: /app/config
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

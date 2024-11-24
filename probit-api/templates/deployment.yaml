@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "todo-go-htmx.fullname" . }}
+  name: {{ include "probit-api.fullname" . }}
   labels:
-    {{- include "todo-go-htmx.labels" . | nindent 4 }}
+    {{- include "probit-api.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "todo-go-htmx.selectorLabels" . | nindent 6 }}
+      {{- include "probit-api.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "todo-go-htmx.labels" . | nindent 8 }}
+        {{- include "probit-api.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -29,11 +29,8 @@ spec:
             - name: http
               containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
-          env:
-            - name: PORT
-              value: {{ .Values.service.targetPort | quote }}
           envFrom:
             - secretRef:
-                name: {{ include "todo-go-htmx.fullname" . }}-secret
+                name: {{ include "probit-api.fullname" . }}-secret
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

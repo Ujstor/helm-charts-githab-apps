@@ -1,0 +1,35 @@
+image:
+  repository: ujstor/probitapi
+  pullPolicy: IfNotPresent
+  tag: "1.0.2"
+replicaCount: 1
+nameOverride: ""
+fullnameOverride: ""
+podAnnotations: {}
+podLabels: {}
+resources:
+  limits:
+    cpu: 200m
+    memory: 252Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+service:
+  type: ClusterIP
+  port: 5005
+  targetPort: 5005
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: 
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+  hosts:
+    - host: probit.ujstor.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+   - secretName: probit-api-tls
+     hosts:
+       - probit.ujstor.com
