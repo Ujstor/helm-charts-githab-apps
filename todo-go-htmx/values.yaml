@@ -73,10 +73,6 @@ postgres-cluster:
             resources:
               requests:
                 storage: 100Mi
-    resources:
-      limits:
-        memory: "64Mi"
-        cpu: "50m"
 
 secret-store:
   secretStore:
