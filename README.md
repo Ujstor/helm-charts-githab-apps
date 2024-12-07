@@ -67,8 +67,8 @@ Ujstor's portfolio Helm chart for Kubernetes
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
 | replicaCount | int | `1` |  |
-| resources.limits.cpu | string | `"100m"` |  |
-| resources.limits.memory | string | `"128Mi"` |  |
+| resources.limits.cpu | string | `"500m"` |  |
+| resources.limits.memory | string | `"512Mi"` |  |
 | resources.requests.cpu | string | `"50m"` |  |
 | resources.requests.memory | string | `"64Mi"` |  |
 | service.port | int | `5000` |  |
@@ -162,8 +162,6 @@ A Helm chart for Kubernetes
 | postgres-cluster.pgBackRestConfig.repos[0].name | string | `"repo1"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.accessModes[0] | string | `"ReadWriteOnce"` |  |
 | postgres-cluster.pgBackRestConfig.repos[0].volume.volumeClaimSpec.resources.requests.storage | string | `"100Mi"` |  |
-| postgres-cluster.pgBackRestConfig.resources.limits.cpu | string | `"50m"` |  |
-| postgres-cluster.pgBackRestConfig.resources.limits.memory | string | `"64Mi"` |  |
 | postgres-cluster.port | int | `5432` |  |
 | postgres-cluster.postgresVersion | int | `16` |  |
 | postgres-cluster.users[0].databases[0] | string | `"social-media-fastapi"` |  |
@@ -275,8 +273,8 @@ A Helm chart for Kubernetes
 | postgres-cluster.users[0].name | string | `"todo-go-htmx"` |  |
 | postgres-cluster.users[0].options | string | `"SUPERUSER"` |  |
 | replicaCount | int | `1` |  |
-| resources.limits.cpu | string | `"100m"` |  |
-| resources.limits.memory | string | `"128Mi"` |  |
+| resources.limits.cpu | string | `"200m"` |  |
+| resources.limits.memory | string | `"256Mi"` |  |
 | resources.requests.cpu | string | `"50m"` |  |
 | resources.requests.memory | string | `"64Mi"` |  |
 | secret-store.secretStore.clusterWide | bool | `false` |  |

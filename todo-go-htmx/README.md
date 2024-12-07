@@ -50,8 +50,8 @@ A Helm chart for Kubernetes
 | postgres-cluster.users[0].name | string | `"todo-go-htmx"` |  |
 | postgres-cluster.users[0].options | string | `"SUPERUSER"` |  |
 | replicaCount | int | `1` |  |
-| resources.limits.cpu | string | `"100m"` |  |
-| resources.limits.memory | string | `"128Mi"` |  |
+| resources.limits.cpu | string | `"200m"` |  |
+| resources.limits.memory | string | `"256Mi"` |  |
 | resources.requests.cpu | string | `"50m"` |  |
 | resources.requests.memory | string | `"64Mi"` |  |
 | secret-store.secretStore.clusterWide | bool | `false` |  |
