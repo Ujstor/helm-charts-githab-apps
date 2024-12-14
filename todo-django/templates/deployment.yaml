@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "social-media-fastapi.fullname" . }}
+  name: {{ include "todo-django.fullname" . }}
   labels:
-    {{- include "social-media-fastapi.labels" . | nindent 4 }}
+    {{- include "todo-django.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "social-media-fastapi.selectorLabels" . | nindent 6 }}
+      {{- include "todo-django.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,7 +16,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "social-media-fastapi.labels" . | nindent 8 }}
+        {{- include "todo-django.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -29,12 +29,13 @@ spec:
             - name: http
               containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
+          env:
+            - name: PORT
+              value: {{ .Values.service.targetPort | quote }}
           envFrom:
             - secretRef:
-                name: {{ include "social-media-fastapi.fullname" . }}-secret
+                name: {{ include "todo-django.fullname" . }}-secret
             - secretRef:
-                name: {{ include "social-media-fastapi.fullname" . }}-config-secret
-            - configMapRef:
-                name: {{ include "social-media-fastapi.fullname" . }}-config
+                name: {{ include "todo-django.fullname" . }}-config-secret
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

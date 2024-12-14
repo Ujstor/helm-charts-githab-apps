@@ -1,7 +1,7 @@
 image:
-  repository: ujstor/fastapi
+  repository: ujstor/django_todolist
   pullPolicy: IfNotPresent
-  tag: "1.0.4"
+  tag: "1.0.1"
 replicaCount: 1
 nameOverride: ""
 fullnameOverride: ""
@@ -9,32 +9,32 @@ podAnnotations: {}
 podLabels: {}
 resources:
   limits:
-    cpu: 200m
-    memory: 252Mi
+    cpu: 500m
+    memory: 512Mi
   requests:
-    cpu: 100m
-    memory: 128Mi
+    cpu: 50m
+    memory: 64Mi
 service:
   type: ClusterIP
-  port: 8010
-  targetPort: 8010
+  port: 8050
+  targetPort: 8050
 ingress:
   enabled: true
   className: "nginx"
-  annotations:
+  annotations: 
     cert-manager.io/cluster-issuer: "letsencrypt" 
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
   hosts:
-    - host: social-media.api.ujstor.com
+    - host: django-todo.ujstor.com
       paths:
         - path: /
           pathType: Prefix
   tls:
-   - secretName: social-media-fastapi-tls
+   - secretName: django-todo-htmx-tls
      hosts:
-       - social-media.api.ujstor.com
+       - django-todo.ujstor.com
 
 postgres-cluster:
   postgresVersion: 16
@@ -42,7 +42,7 @@ postgres-cluster:
   instanceCPU: 250m
   instanceReplicas: 1
   instances:
-    - name: social-media-fastapi
+    - name: todo-htmx-go
       replicas: 1
       dataVolumeClaimSpec:
         accessModes:
@@ -58,11 +58,13 @@ postgres-cluster:
           - local all postgres trust
           - local all all trust
           - host all all all md5
+  #allow goose migrations
   users:
-    - name: social-media-fastapi
+    - name: todo-django
       databases:
-        - social-media-fastapi
+        - todo-django
       options: "SUPERUSER"
+  # Add minimal backup configuration
   pgBackRestConfig:
     repos:
       - name: repo1
@@ -83,4 +85,4 @@ secret-store:
         auth:
           serviceAccount:
             create: true
-            name: "social-media-fastapi-secret-store-sa"
+            name: "django-todo-secret-store-sa"
