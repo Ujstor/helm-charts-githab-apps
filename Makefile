@@ -1,7 +1,7 @@
 all: ur clean package index
 	@echo "Packaging complete and index.yaml updated."
 
-CHARTS := portfolio streamlit-wh todo-go-htmx notes-flask probit-api social-media-fastapi
+CHARTS := portfolio streamlit-wh todo-go-htmx notes-flask probit-api social-media-fastapi github-readme-stats
 
 REPO_URL := https://Ujstor.github.io/helm-charts-github-apps
 

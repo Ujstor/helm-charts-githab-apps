@@ -14,6 +14,8 @@ A Helm chart for Kubernetes
 | image.tag | string | `"1.0.2"` |  |
 | ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"false"` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/ssl-redirect" | string | `"false"` |  |
 | ingress.className | string | `"nginx"` |  |
 | ingress.enabled | bool | `true` |  |
 | ingress.hosts[0].host | string | `"probit.ujstor.com"` |  |
