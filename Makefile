@@ -1,5 +1,10 @@
-all: ur clean package index
+all: update-repos ur package index
 	@echo "Packaging complete and index.yaml updated."
+
+update-repos:
+	@echo "Updating Helm repositories..."
+	@helm repo update
+
 
 CHARTS := portfolio streamlit-wh todo-go-htmx notes-flask probit-api social-media-fastapi github-readme-stats todo-django
 
@@ -9,7 +14,7 @@ package: $(CHARTS)
 
 $(CHARTS):
 	@echo "Packaging $@ chart..."
-	@helm dependency update $@ || helm dependency build $@
+	@helm dependency update --skip-refresh $@ || helm dependency build --skip-refresh $@
 	helm package $@ --destination .
 index: package
 	@echo "Generating index.yaml..."
@@ -54,4 +59,4 @@ ur update-readme: docs
 			fi \
 		fi \
 	done
-.PHONY: d docs hdi helm-docs ur update-readme package $(CHARTS) index clean all
+.PHONY: d docs hdi helm-docs ur update-readme package $(CHARTS) index clean all update-repos

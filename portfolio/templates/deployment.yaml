@@ -31,3 +31,5 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      imagePullSecrets:
+      - name: {{ .Values.image.pullSecret }}

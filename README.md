@@ -95,8 +95,9 @@ Ujstor's portfolio Helm chart for Kubernetes
 |-----|------|---------|-------------|
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"ujstor/portfolio-web-go"` |  |
-| image.tag | string | `"1.2.3"` |  |
+| image.pullSecret | string | `"regcred"` |  |
+| image.repository | string | `"harbor.k3s0.ujstor.com/docker/portfolio"` |  |
+| image.tag | string | `"2.0.0"` |  |
 | ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"false"` |  |
