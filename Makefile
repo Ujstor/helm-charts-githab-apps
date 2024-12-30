@@ -6,7 +6,7 @@ update-repos:
 	@helm repo update
 
 
-CHARTS := portfolio streamlit-wh todo-go-htmx notes-flask probit-api social-media-fastapi github-readme-stats todo-django
+CHARTS := portfolio streamlit-wh todo-go-htmx notes-flask probit-api social-media-fastapi github-readme-stats todo-django service-mesh-test-app
 
 REPO_URL := https://Ujstor.github.io/helm-charts-github-apps
 
