@@ -8,5 +8,5 @@ Service mesh test app Helm chart for Kubernetes
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| domain | string | `"servicemesh.k3s3.local"` |  |
+| domain | string | `"servicemesh.k3s5.ujstor.dev"` |  |
 

@@ -3,9 +3,9 @@ entries:
   github-readme-stats:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-30T21:18:53.061037848+01:00"
+    created: "2024-12-31T00:08:54.331076027+01:00"
     description: A Helm chart for Kubernetes
-    digest: 14fd5c912930eb4950b1b3b0449d8fa70be002e0ba363e3337f106a9c716eff7
+    digest: 1b01b1cbccc563d61a349f62886fb540fe8e24599cf0021931fcb22cd3b77d61
     name: github-readme-stats
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   notes-flask:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-30T21:18:53.061241832+01:00"
+    created: "2024-12-31T00:08:54.331254734+01:00"
     description: A Helm chart for Kubernetes
-    digest: b269bb9da59b28fd56a2297b411b543a0d2e07034ac38e12e245446e8198bb8b
+    digest: 29778f935b09482a6687998a71d57663d24257d2ee634e7c6e23549a2e794fe1
     name: notes-flask
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   portfolio:
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2024-12-30T21:18:53.061442695+01:00"
+    created: "2024-12-31T00:08:54.331438041+01:00"
     description: Ujstor's portfolio Helm chart for Kubernetes
-    digest: b340b4265f43e50cbe2578aa505d30dfea893f8d31b060e3df966664d904c0e1
+    digest: c722f9cbe8b451c8b104b0176dbfe6a81c2bc9341dc9f9d270adbfdb9165bf51
     name: portfolio
     type: application
     urls:
@@ -36,9 +36,9 @@ entries:
   probit-api:
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2024-12-30T21:18:53.061635068+01:00"
+    created: "2024-12-31T00:08:54.333643623+01:00"
     description: A Helm chart for Kubernetes
-    digest: e6d4c59e6ebda79a2741e35549a711b50980a5d4bfa07b97aa17545452f1f37f
+    digest: ad57dce2e1f5e5d179ea98561a4c759dec31886e392f5d65919cc87a24a63247
     name: probit-api
     type: application
     urls:
@@ -47,9 +47,9 @@ entries:
   service-mesh-test-app:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-30T21:18:53.06176709+01:00"
+    created: "2024-12-31T00:08:54.333791209+01:00"
     description: Service mesh test app Helm chart for Kubernetes
-    digest: a9112ee9ab3b49c956eaedf308164e5c73e62685f2db4c5e4dffb0e0fcf34f30
+    digest: 1288a3076b5051f89efe397322e603f88a1549814e59a695e7d9c4242abc8bde
     name: service-mesh-test-app
     type: application
     urls:
@@ -58,7 +58,7 @@ entries:
   social-media-fastapi:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2024-12-30T21:18:53.062443922+01:00"
+    created: "2024-12-31T00:08:54.334482044+01:00"
     dependencies:
     - name: postgres-cluster
       repository: https://ujstor.github.io/helm-charts-system
@@ -67,7 +67,7 @@ entries:
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: cdef90653bcbf9b5f8d54eaad72bb22e6f159673df02674121b31a0b89ce90ea
+    digest: ac1bd2da5cd3e9d1d0b752a04864f099a58b694f6fcb04f141dbc9759ed9274f
     name: social-media-fastapi
     type: application
     urls:
@@ -76,9 +76,9 @@ entries:
   streamlit-wh:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2024-12-30T21:18:53.062665035+01:00"
+    created: "2024-12-31T00:08:54.334671832+01:00"
     description: Ujstor's streamlit-wh Helm chart for Kubernetes
-    digest: 8dd5e12d18c825c978153e052b12592ce32942c9067d81fcb815bada53448372
+    digest: d51e1e1174239fc886bbe8ce950d24a8f471dadce4ed9c314c18c36d48f037c9
     name: streamlit-wh
     type: application
     urls:
@@ -87,7 +87,7 @@ entries:
   todo-django:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2024-12-30T21:18:53.063327116+01:00"
+    created: "2024-12-31T00:08:54.335331786+01:00"
     dependencies:
     - name: postgres-cluster
       repository: https://ujstor.github.io/helm-charts-system
@@ -96,7 +96,7 @@ entries:
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: 849d772886f68f94c26735ae2ac3dc57ea15fab26b3192a628aafbdbca4906e1
+    digest: c54d714aac095a5929ed638ad4ff8cb6a6f51c55819b6bbe3c2e4a61cf2d8661
     name: todo-django
     type: application
     urls:
@@ -105,7 +105,7 @@ entries:
   todo-go-htmx:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2024-12-30T21:18:53.064011948+01:00"
+    created: "2024-12-31T00:08:54.33597821+01:00"
     dependencies:
     - name: postgres-cluster
       repository: https://ujstor.github.io/helm-charts-system
@@ -114,10 +114,10 @@ entries:
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
     description: A Helm chart for Kubernetes
-    digest: e051c0fc5021cdf0882bed458ef313b818205c4377542a3a4e004f1e7b9014fe
+    digest: b9f5f04028f79e9041e5f95834f5e10c8b9705cb6cc163aa052f6204e62d0117
     name: todo-go-htmx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-github-apps/todo-go-htmx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-12-30T21:18:53.060757383+01:00"
+generated: "2024-12-31T00:08:54.330801597+01:00"

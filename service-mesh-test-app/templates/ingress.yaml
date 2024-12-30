@@ -1,37 +1,29 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
-  name: videos-web
+  name: web-api-ingress
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - {{ .Values.domain }}
+    secretName: servicemesh-tls-secret
   rules:
   - host: {{ .Values.domain }}
     http:
       paths:
-      - path: /home(/|$)(.*)
+      - path: /(.*)
         pathType: ImplementationSpecific
         backend:
           service:
             name: videos-web
             port:
               number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-  name: playlists-api
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: {{ .Values.domain }}
-    http:
-      paths:
       - path: /api/playlists(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
